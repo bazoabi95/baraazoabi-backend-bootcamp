@@ -3,6 +3,7 @@
 #list of 20 materails
 #the 4 alien delegations will be created as objects
 
+### what is this? this is not real name materials...
 myMaterials=['FXY45','FD45G','AQW67','RTY89','OIU90','MNB09','QWE21','GVZ65','ZXC11','ERT65','MJO09','TYZ00','ZERS0','QMP80','JJK78','POZX6','QAAB7','UVC80','KKO44','YTB88','TY679']
 
 import copy
@@ -16,21 +17,27 @@ class AlienDelegation:
         #materials property have to be a list 
     def __str__(self):
         return f'Alein delegation Name: {self.name} \n Needed materials: {self.materials}\n Number of Suggestions: {self.initial_suggestions}\n'
+    ### no need to uppercase
     def get_NumSuggestions(self):
         return self.numSuggestions
     def get_materials(self):
         return(self.materials)
+     ### no need to uppercase
     def set_NumSuggestions(self,newNum):
          self.numSuggestions=newNum
     def get_initialSugg(self):
         return self.initial_suggestions
+
+### DRY - make it dynamic
 a1= AlienDelegation("NEMO",['UVC80','KKO44','YTB88','456df','0987e'],4)
 a2= AlienDelegation("VEVO",['C80OL','RTY89','OIU90','MNB09','00025'],4)
 a3= AlienDelegation("SOLO",['AQW67','RTY89','OIU90','MNB09','QWE21'],5)
 a4= AlienDelegation("ROU",['85LKHG','KKK00','YUYHG0','90MGFH','BNM09'],4)
 
+### dynamic
 alien_list=[a1,a2,a3,a4]
-        
+
+### imports should be at the top of the page
 import random    
 
 #the function suggestion will choose for us randomly a material from the materials list above 
